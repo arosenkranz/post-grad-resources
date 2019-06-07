@@ -1,0 +1,18 @@
+.nav {
+  background-color: rgb(36, 113, 158);
+  color: white;
+  font-size: 3rem;
+  height: 10rem;
+  width: 100%;
+  box-shadow: 0 2rem 1.5rem rgba(0,0,0,.2);
+
+  position: absolute;
+  top: 0;
+}
+
+.nav__greeting {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+} 

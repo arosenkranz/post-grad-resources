@@ -1,0 +1,39 @@
+.box {
+  height: 150px;
+  width: 250px;
+  margin: 20px;
+}
+
+.inside-box {
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+
+#top1, #bottom1 {
+  background-color: red;
+}
+
+#top2, #bottom2 {
+  background-color: green;
+}
+
+#top3, #bottom3 {
+  background-color: blue;
+}
+
+button {
+  height: 100px;
+  width: 200px;
+  margin: 10px;
+}
+
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Your code goes below here! */
+

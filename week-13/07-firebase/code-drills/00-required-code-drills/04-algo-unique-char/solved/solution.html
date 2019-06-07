@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Unique characters</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    // Solution 1: Less efficient
+    function unique(str) {
+      var compare = str.split("");
+
+
+      for (var i = 0; i < str.length; i++) {
+        var temp = compare.indexOf(str[i])
+        compare.splice(temp, 1)
+        if (compare.indexOf(str[i]) > -1) {
+          return false
+        }
+
+      }
+      return true
+    }
+
+    console.log(unique1("chicken"))
+    console.log(unique1("robert"))
+    console.log(unique1("ricky"))
+
+    // Solution 2: More efficient
+    function unique1(str) {
+      var compare = str.split("");
+      var obj = {}
+      
+      for (var i = 0; i < str.length; i++) {
+        if (obj[str[i]]) {
+          return false
+        } else {
+          obj[str[i]] = 1
+        }
+
+      }
+      return true
+    }
+
+
+  </script>
+
+</body>
+
+</html>

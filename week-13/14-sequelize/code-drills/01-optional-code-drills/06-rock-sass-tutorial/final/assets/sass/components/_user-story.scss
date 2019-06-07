@@ -1,0 +1,19 @@
+.user-story {
+
+  border: black solid 2px;
+  overflow: auto;
+  padding: 3rem;
+  width: 50rem;
+  border-radius: $border-radius;
+  box-shadow: $shadow-default;
+  font-size: 1.8rem;
+  text-align: center;
+
+  &__img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 100%;
+    float: left;
+    margin-right: 1rem;
+  }
+}

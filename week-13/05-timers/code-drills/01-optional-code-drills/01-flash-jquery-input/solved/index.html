@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Practice with forms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+  <h1>Practice with forms</h1>
+
+  <div class="container">
+    <div class="row mt-5">
+      <!-- We display what the user typed into the form in this area -->
+      <div class="col text-center" id="display-area"> </div>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col">
+        <form>
+          <div class="form-group">
+            <!-- The user inputs text and we output that data to the display area -->
+            <label for="first-name">First Name</label>
+            <input type="text" class="form-control" id="first-name">
+            <label for="last-name">Last Name</label>
+            <input type="text" class="form-control" id="last-name">
+            <label for="occupation">Occupation</label>
+            <input type="text" class="form-control" id="occupation">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state">
+          </div>
+          <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+        </form>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+  <script src="challenge-prompt.js"></script>
+</body>
+</html>

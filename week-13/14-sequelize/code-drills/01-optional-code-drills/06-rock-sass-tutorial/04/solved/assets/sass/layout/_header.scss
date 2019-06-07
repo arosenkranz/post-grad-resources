@@ -1,0 +1,12 @@
+.header {
+  background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
+  text-align: center;
+  padding: 5rem;
+
+  &__img {
+    height: 25rem;
+    border-radius: 100%;
+  }
+
+  
+}

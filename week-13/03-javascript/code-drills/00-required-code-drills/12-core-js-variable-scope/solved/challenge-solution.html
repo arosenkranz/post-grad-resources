@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Scope</title>
+</head>
+<body>
+  
+
+<h1>OPEN THE CONSOLE</h1>
+
+<script>
+  var number = 1
+
+  function numReader1() {
+    console.log(number)
+  }
+
+  function numReader2() {
+    var number = 2 
+    console.log(number)
+  }
+
+  function numReader3() {
+    number = 3
+    console.log(number)
+  }
+
+  function numReader4() {
+    number -= 4
+    console.log(number)
+  }
+
+  function  numReader5() {
+    number += 4
+    console.log(number)
+  }
+
+  function numReader6(newNum) {
+    number += newNum
+    console.log(newNum)
+  }
+
+  function numReader22() {
+    var number = 22
+    console.log(number)
+  }
+
+  // Replace the underscores with the expected output in the console in each `Answer = ___` 
+
+
+console.log("======================== QUESTION 1 ==========================")
+  console.log(number) //Answer = 1
+
+
+console.log("======================== QUESTION 2 ==========================")
+  numReader1() //Answer = 1
+
+
+console.log("======================== QUESTION 3 ==========================")
+  console.log(number) //Answer = 1
+
+
+console.log("======================== QUESTION 4 ==========================")
+  numReader2() //Answer = 2
+
+
+console.log("======================== QUESTION 5 ==========================")
+  console.log(number) //Answer = 1
+
+
+console.log("======================== QUESTION 6 ==========================")
+  numReader3() //Answer = 3
+
+
+console.log("======================== QUESTION 7 ==========================")
+  console.log(number) //Answer = 3
+
+
+console.log("======================== QUESTION 8 ==========================")
+  numReader5() //Answer = 7
+
+
+console.log("======================== QUESTION 9 ==========================")
+  console.log(number) //Answer = 7
+
+
+console.log("======================== QUESTION 10 ==========================")
+  numReader4()  //Answer = 3
+
+
+  number = 15 // DON'T FORGET TO TAKE THIS INTO ACCOUNT!
+
+
+console.log("======================== QUESTION 11 ==========================")
+  console.log(number)  //Answer = 15
+
+
+console.log("======================== QUESTION 12 ==========================")
+  numReader4() //Answer = 11
+
+
+console.log("======================== QUESTION 13 ==========================")
+  numReader6(8) //Answer = 8
+
+
+console.log("======================== QUESTION 14 ==========================")
+  console.log(number) //Answer = 19
+
+var number = "chicken" // DON'T FORGET TO TAKE THIS INTO ACCOUNT!
+
+console.log("======================== QUESTION 15 ==========================")
+  console.log(number) //Answer = chicken
+
+console.log("======================== QUESTION 16 ==========================")
+numReader2() //Answer = 2
+
+console.log("======================== QUESTION 17 ==========================")
+  numReader1() //Answer = chicken
+
+var chicken = 2
+
+
+console.log("======================== QUESTION 18 ==========================")
+console.log(number) //Answer = chicken
+
+console.log("======================== QUESTION 19 ==========================")
+numReader22() //Answer = 22
+
+number = 1
+
+console.log("======================== QUESTION 20 ==========================")
+numReader1() //Answer = 1
+
+
+</script>
+
+</body>
+</html>

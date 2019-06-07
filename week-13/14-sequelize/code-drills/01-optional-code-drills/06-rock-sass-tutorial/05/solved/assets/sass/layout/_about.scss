@@ -1,0 +1,14 @@
+.about {
+  text-align: center;
+  padding: 5rem;
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+}

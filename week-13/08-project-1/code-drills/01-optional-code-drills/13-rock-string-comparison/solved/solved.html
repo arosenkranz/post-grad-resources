@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>All candies taste the same</title>
+</head>
+<body>
+  
+
+
+  <script>
+  var sourPatch = "abcd"
+  
+  var candy = "ogcbwbkdafjdcjddd" //10
+
+
+//Worse solution
+  function numSourPatch(s, c) {
+
+    var total = 0;
+
+    for (var i = 0 ; i < c.length ; i++) {
+      for (var j = 0 ; j < s.length ; j++) {
+        if (s[j] === c[i]) {
+          total++
+        }
+      }
+    }
+
+    return total
+  }
+
+// Better solution
+  function numSourPatch2(s, c) {
+    var obj = {};
+    var total = 0; 
+
+    for (var i = 0 ; i < s.length ; i ++) {
+      obj[s[i]] = true ;
+
+    }
+
+    for (var i = 0 ; i < c.length ; i ++) {
+      if (obj[c[i]]) {
+        total++
+      }
+        
+    }
+
+    return total
+  }
+  console.log(numSourPatch(sourPatch, candy))
+  console.log(numSourPatch2(sourPatch, candy))
+
+  //NOTE:
+  // The first solution is worse because it contains a loop inside of a loop. That means that the time it takes to run this application will be the size of the input squared. In the second solution, we are simply looping over once, rather than creating a new loop in every iteration of the first.
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.news-card {
+  border: solid 2px black;
+  padding: 2rem;
+  width: 30rem;
+  float: left;
+  height: 40rem;
+  text-align: center;
+  margin: 3rem;
+}
+
+.news-card__img {
+  height: 200px;
+  width: auto;
+  max-width: 25rem;
+}

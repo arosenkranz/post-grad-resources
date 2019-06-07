@@ -1,0 +1,233 @@
+@media (max-width: 1300px) {
+  .box-red {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+
+    position: fixed;
+    top: 0;
+    left: 5%;
+  }
+
+  .box-blue {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .box-red {
+
+    top: 10px;
+
+  }
+
+  .box-blue {
+
+    bottom: 10px;
+    
+  }
+
+  
+}
+
+@media (max-width: 1200px) {
+  .box-red {
+
+    top: 20px;
+
+  }
+
+  .box-blue {
+
+    bottom: 20px;
+    
+  }
+}
+
+@media (max-width: 1150px) {
+  .box-red {
+
+    top: 30px;
+
+  }
+
+  .box-blue {
+
+    bottom: 30px;
+    
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-red {
+
+    top: 40px;
+
+  }
+
+  .box-blue {
+
+    bottom: 40px;
+    
+  }
+}
+
+@media (max-width: 1050px) {
+  .box-red {
+
+    top: 50px;
+
+  }
+
+  .box-blue {
+
+    bottom: 50px;
+    
+  }
+}
+
+@media (max-width: 1000px) {
+  .box-red {
+
+    top: 60px;
+
+  }
+
+  .box-blue {
+
+    bottom: 60px;
+    
+  }
+}
+
+@media (max-width: 950px) {
+  .box-red {
+
+    top: 70px;
+
+  }
+
+  .box-blue {
+
+    bottom: 70px;
+    
+  }
+}
+
+@media (max-width: 900px) {
+  .box-red {
+
+    top: 80px;
+
+  }
+
+  .box-blue {
+
+    bottom: 80px;
+    
+  }
+}
+
+@media (max-width: 850px) {
+  .box-red {
+
+    top: 90px;
+
+  }
+
+  .box-blue {
+
+    bottom: 90px;
+    
+  }
+}
+
+@media (max-width: 800px) {
+  .box-red {
+
+    top: 100px;
+
+  }
+
+  .box-blue {
+
+    bottom: 100px;
+    
+  }
+}
+
+@media (max-width: 750px) {
+  .box-red {
+
+    top: 110px;
+
+  }
+
+  .box-blue {
+
+    bottom: 110px;
+    
+  }
+}
+
+@media (max-width: 700px) {
+  .box-red {
+
+    top: 120px;
+
+  }
+
+  .box-blue {
+
+    bottom: 120px;
+    
+  }
+}
+
+@media (max-width: 650px) {
+  .box-red {
+
+    top: 130px;
+
+  }
+
+  .box-blue {
+
+    bottom: 130px;
+    
+  }
+}
+
+@media (max-width: 600px) {
+  .box-red {
+
+    top: 140px;
+
+  }
+
+  .box-blue {
+
+    bottom: 140px;
+    
+  }
+}
+
+@media (max-width: 550px) {
+  .box-red {
+
+    top: 150px;
+
+  }
+
+  .box-blue {
+
+    bottom: 150px;
+    
+  }
+}

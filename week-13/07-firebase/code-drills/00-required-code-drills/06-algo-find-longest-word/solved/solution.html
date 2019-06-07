@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Find the longest word in a sentence</title>
+</head>
+<body>
+
+
+  <script>
+
+var sentence = "It is our choices, that show what we truly are, far more than our abilities"
+
+function longestWord(sen) {
+
+
+  // ====================== YOUR WORK HERE ===================
+
+  //Bonus: Make it so that punctuation is not counted in the length of a word.
+  sen = sen.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
+
+
+  var senArr = sen.split(" ")
+
+  var longestWord = "";
+
+  for (var i = 0 ; i < senArr.length; i ++) {
+  
+    if (senArr[i].length > longestWord.length) {
+      
+      longestWord = senArr[i]
+    }
+  }
+
+return longestWord
+    // =========================================================
+  
+
+}
+console.log(longestWord(sentence))
+  </script>
+  
+</body>
+</html>

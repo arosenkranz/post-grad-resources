@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <title>So you think you can API?</title>
+
+  <style>
+
+    .heading__container {
+      text-align: center !important;
+    }
+    .heading__main {
+      text-align: center;
+      transform: skew(5deg) rotate(-5deg);
+      background-image: linear-gradient(to right, red, blue);
+      -webkit-background-clip: text;
+      color: transparent;
+      text-transform: uppercase;
+      font-weight: 700;
+      display: inline-block;
+      margin: auto;
+      position: relative;
+      top: 30px;
+      font-size: 30px;
+    } 
+
+    .news {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      height: 70%;
+      width: 40%;
+      border: black 2px solid;
+      border-radius: 3px;
+      padding: 10px;
+      overflow: auto;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .author {
+      text-align: center;
+      font-size: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="heading__container">
+    <h1 class="heading__main">Extra, Extra! Read all about it!</h1>
+  </div>
+
+  <div class="news">
+    <div class="appendMe"></div>
+
+  </div>
+
+  <script>
+
+    jQuery.ajaxPrefilter(function (options) {
+      if (options.crossDomain && jQuery.support.cors) {
+        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+      }
+    });
+
+
+    $.ajax({
+      url: 'https://newsapi.org/v2/top-headlines?' +
+        'country=us&' +
+        // This solution does not include an API key. You will have to fill in the API key in the query url
+        'apiKey=???????',
+      method: "GET"
+    }).then(function (response) {
+      console.log(response);
+      for (var i = 0; i < response.articles.length; i++) {
+        if (!response.articles[i].author) {
+          response.articles[i].author = "I wrote it!"
+        }
+        $(".appendMe").append('<div><h3 class="title">' + response.articles[i].title + '</h3> <p class="author">' + response.articles[i].author + '</p> <p class="desc">' + response.articles[i].description + '</p> <hr></div>')
+
+      }
+    });
+
+  </script>
+</body>
+
+</html>

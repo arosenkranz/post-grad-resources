@@ -1,0 +1,31 @@
+id,foodname,main_ingredients,seasoning, oils, side_dish,origin
+1,BakedSalmon,salmon,rosemary,olive oil,Salad,California
+2,ChickenBreast,chicken,salt pepper, vegatable oil,Salad,New Orleans
+3,SourDough,flour,sugar salt yeast, margarine,NULL,California
+4,MacaroniAndCheese,elbowmacaroni, chedder and parmessan cheese, butter, NULL,California
+5,poboy,shrimp,cajin salt,pearnut oil,NULL,New Orleans 
+6,BeanCheeseBurrito,refriedbeans,chilli garlic cumin,NULL,NULL,New Mexico
+7,BBQBeefSteak,beef,salt pepper,NULL,Salad,Texas
+8,SpaghettiMeatSauce,Spaghetti and beef,onion,olive oil,cheese,New York
+9,FriedRice,rice egg meat, salt pepper, peanut oil,peas scallion,California
+10,PanCakes,flour, salt,oil,meat,Massachusetts 
+11,FrenchToastStuffedBlueberryCreamCheese,Toast blueberries eggs, vanilla, butter, cream cheese,Kentucky 
+12,ScrambledEggPlatterBaconHashbrownsBiscuit,eggs potato bacon, salt pepper, peanut oil, Montana
+13,BurritoEnchiladoSteak,skirt steak,salt pepper, canola oil, rice,New Mexico
+14,Calzones,cheese cheddarcheese pepperoni, salt, vegatable oil,,NULL, Navada 
+15,WholePepperoniPizza, flour pepperoni mozzzarella, basil tomato, olive oil, wings, Chicago
+16,Oreos,flour sugar, sugar, canola oil, NULL, California
+17,Pringles,potato, salt, vegatable oil, NULL, New Mexico
+18,Popcorn,corn, salt, vegatable oil, kettle seasoning, New Orleans
+19,RiceKrispies, rice, sugar, NULL, marshmallow, New York
+20,Reesebuttercups,chocolate, sugar, NULL, peanutbutter, Navada
+21,CoolRanchDoritos,corn, salt, vegatable oil, NULL, Massachusetts
+22,Skittles,sugar, cornsyrup, hydrogenated palm kernel oil, NULL, Kentucky
+23,Funyuns,corn, onion powder, vegetable oil, NULL, New Mexico
+24,ChipsAhoy,flour, sugar, high fructose corn syrup, chocolate, Montana
+25,WheatThins,wheat flour, salt, canola oil, dip, Navada
+26,GoldFish,wheat flour,salt, cegetable oil, NULL, New Orleans
+27,FrenchFry,potatoes,salt,hydrogenated soybean oil, ketchup, Texas
+28,SlimJim,beef chicken, salt, soybean oil, NULL, Mexico
+29,RanchCornNuts,corn, salt, corn oil, NULL, Texas
+30,HostessTwinkies,flour, sugar, canola oil, corn syrup, Navada

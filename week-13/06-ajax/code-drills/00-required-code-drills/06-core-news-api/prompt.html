@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <title>So you think you can API?</title>
+
+  <style>
+
+    .heading__container {
+      text-align: center !important;
+    }
+    .heading__main {
+      text-align: center;
+      transform: skew(5deg) rotate(-5deg);
+      background-image: linear-gradient(to right, red, blue);
+      -webkit-background-clip: text;
+      color: transparent;
+      text-transform: uppercase;
+      font-weight: 700;
+      display: inline-block;
+      margin: auto;
+      position: relative;
+      top: 20px;
+
+    }
+
+    .news {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 70%;
+      width: 40%;
+      border: black 2px solid;
+      border-radius: 3px;
+      padding: 10px;
+      overflow: auto;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .author {
+      text-align: center;
+      font-size: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="heading__container">
+    <h1 class="heading__main">Extra, Extra! Read all about it!</h1>
+  </div>
+
+  <div class="news">
+    <div class="appendMe"></div>
+  </div>
+
+  <script>
+    // Some APIs will give us a cross-origin (CORS) error. This small function is a fix for that error. You can also check out the chrome extenstion (https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en).
+    jQuery.ajaxPrefilter(function (options) {
+      if (options.crossDomain && jQuery.support.cors) {
+        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+      }
+    });
+
+
+    // STEP 4: Based on your research of this API, assign a value to queryURL you think is appropriate to retrieve the top news stories in the US. 
+    var queryURL = "";
+
+
+    $.ajax({
+      url: queryURL, 
+      method: "GET"
+    }).then(function (response) {
+      
+      // STEP 5. This is where we'll render our responses to the DOM. 
+      
+        // Because we want to render multiple responses, we will need to use a loop. 
+
+        // Jquery gives us a few methods to render content to our app. .text(), .html(), .append(), .prepend(). Use whichever of these you find most appropriate in this case. Remember, our goal is to render the articles inside of the div with the class of news.
+
+        // Check out the .news div for a clue as to which method we should use in this context.
+
+        // Render the content in this format: 
+        //
+        // <div>
+        //   <h3 class="title">TITLE HERE</h3>
+        //   <p class="author">AUTHOR HERE</p>
+        //   <p class="desc">DESCRIPTION HERE</p>
+        //   <hr>
+        // </div> 
+        //
+        // The title of each article should go in the h3 with the class of title
+        // The author of each article should go in the p tag with the class of author
+        // The description of the article should go in the p tag with the class of desc
+
+
+
+
+      // Step 6. By now, you should have been able to render all of the articles to the news div.
+      
+      // You may notice that some of the articles' authors come back as null. Let's fix that. Within your loop, create a condition which checks to see if the author has value. If it doesn't, have the author instead read your own name
+      
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>

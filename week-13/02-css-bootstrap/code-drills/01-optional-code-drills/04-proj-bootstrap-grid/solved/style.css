@@ -1,0 +1,100 @@
+/* We need to do this only in this circumstance to make our rows behave how we want them to */
+.row {
+  padding: 0;
+  margin:0;
+}
+
+/* Will style every class containing the characters "col-" */
+/* We need to do this only in this circumstance to make our colored columns behave how we want them to */
+[class^="col-"] {
+  padding: 0;
+}
+
+.primary {
+  height: 100px;
+}
+
+.secondary {
+  height: 50px;
+}
+
+.tertiary {
+  height: 25px;
+}
+
+.fourth {
+  height: 12.5px;
+}
+
+.green1 {
+  background-color: #63D471;
+}
+
+.green2 {
+  background-color: #CFD11A;
+}
+
+.green3 {
+  background-color: #52B788;
+}
+
+.green4 {
+  background-color: rgb(24, 201, 18);
+}
+
+.blue1 {
+  background-color: #69FFF1;
+}
+
+.blue2 {
+  background-color: #5C80BC;
+}
+
+.blue3 {
+  background-color: #0471A6;
+}
+
+.yellow1 {
+  background-color: #F6F930;
+}
+
+.yellow2 {
+  background-color: gold;
+}
+
+.orange1 {
+  background-color: orange;
+}
+
+.black {
+  background-color: black;
+}
+
+.purp1 {
+  background-color: #360568;
+}
+
+.purp2 {
+  background-color: purple;
+}
+
+.pink1 {
+  background-color: pink;
+}
+
+.pink2 {
+  background-color: magenta
+}
+
+.red1 {
+  background-color: #710000;
+}
+
+.red2 {
+  background-color: red;
+}
+
+.red3 {
+  background-color: #FF3C38;
+}
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>So you think you can API? Pt.2</title>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <style>
+    input {
+      display: block;
+    }
+
+    .ebForm {
+      display: inline-block;
+      padding: 20px;
+      border: black solid 2px;
+
+    }
+    .ebForm * {
+      margin: 10px;
+    }
+
+    .apiReturns {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: solid 2px black;
+      padding: 20px;
+      overflow: auto;
+      height: 70%;
+    }
+
+    .eventName {
+      margin-top: -2px;
+    }
+
+    .eventPic {
+      height: 50px;
+      width: 50px;
+      border-radius: 100%;
+      margin: 3px;
+
+    }
+    .eventPic-holder {
+      shape-outside: circle(50% at 50% 50%);
+     -webkit-shape-outside: circle(50% at 50% 50%);
+     /* -webkit-clip-path: circle(50% at 50% 50%); */
+     /* clip-path: circle(50% at 50% 50%); */
+     float: left;
+     position: relative;
+    }
+
+    .eventText {
+      width: 80%;
+      margin: auto;
+      line-height: 1.5;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="ebForm">
+    <form action="#" class="event-form">
+      <select id="paid" name="paid">
+        <option value="free">Free</option>
+        <option value="paid">Paid</option>
+      </select>
+
+      <input type="text" id="eventName" placeholder="Event Category">
+      <input type="text" id="location" placeholder="location">
+      <input type="submit" name="eventForm" id="eventForm">
+    </form>
+  </div>
+
+<div class="apiReturns">
+  <div class="appendHere"></div>
+
+</div>
+
+  <script>
+    
+    $(document).ready(function () {
+
+      // Some APIs will give us a cross-origin (CORS) error. This small function is a fix for that error. You can also check out the chrome extenstion (https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en).
+      jQuery.ajaxPrefilter(function (options) {
+        if (options.crossDomain && jQuery.support.cors) {
+          options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+        }
+      });
+
+      $(document).on("submit", ".event-form", function (event) {
+        event.preventDefault()
+        var paid = $("#paid").val()
+        
+        var eventName = $("#eventName").val()
+        var location = $("#location").val()
+
+        // This solution does not include an API key. You will have to fill in the API key in the query url
+
+        $.ajax({
+          url: 'https://www.eventbriteapi.com/v3/events/search/?q=' + eventName + '&price=' + paid + '&location.address='+ location +'&token=????',
+          method: "GET"
+        }).then(function (response) {
+          console.log(response)
+
+          
+          for (var i = 0; i < response.events.length ; i++) {
+            console.log(i)
+            $(".appendHere").append('<div class="eventPic-holder"><img src="'+ response.events[i].logo.original.url+'" class="eventPic"></div><h1 class="eventName">'+response.events[i].name.text+'</h1><p class="eventText">'+response.events[i].description.text+'</p><hr>')
+          }
+
+        });
+      })
+
+
+
+    })
+
+  </script>
+</body>
+
+</html>

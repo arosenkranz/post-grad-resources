@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Find the combos</title>
+</head>
+<body>
+  
+
+  <script>
+var array = [3,5,12,4,19,1,18];
+var target = 22;
+
+function getSum(arr, trg) {
+
+  for (var i = 0 ; i < arr.length ; i++) {
+    for(var j = 0 ; j < arr.length ; j++) {
+      if ((arr[i] + arr[j]) === trg) {
+        return [i, j]
+      }
+    }
+  }
+
+  return results
+}
+
+console.log(getSum(array, target))
+  </script>
+</body>
+</html>

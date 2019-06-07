@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>So you think you can API? Pt.5</title>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://connect.soundcloud.com/sdk/sdk-3.3.0.js"></script>
+
+  <style>
+
+    .form-contain {
+      border: 2px solid black;
+      display: inline-block;
+      position: fixed;
+      padding: 10px;
+    }
+
+    input {
+      display: block;
+      margin: 10px;
+    }
+
+    .library {
+      border: solid black 3px;
+      display: block;
+      width: 60%;
+      margin: auto;
+
+    }
+
+    .song {
+      position: relative;
+      background-image: radial-gradient(blue, purple);
+      border-bottom: solid 4px gold;
+      padding: 30px 0;
+    }
+
+    .thumb {
+      height: 100px;
+      width: 100px;
+      border-radius: 100px;
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-60%);
+    }
+
+    .song-audio {
+      display: block;
+      width: 40%;
+      margin: auto;
+    }
+
+    .song-name {
+      text-align: center;
+      margin: 0;
+    }
+
+    .song-artist {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+    <div class="form-contain">
+      <h3 class="search-heading">Search for songs!</h3>
+      <form id="itunes">
+        <input placeholder="term" id="term" type="text">
+        <input type="submit">
+      </form>
+    </div>
+    
+
+  <div class="library"></div>
+
+  <script>
+
+    $(document).ready(function () {
+      // Some APIs will give us a cross-origin (CORS) error. This small function is a fix for that error. You can also check out the chrome extenstion (https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en).
+      jQuery.ajaxPrefilter(function (options) {
+        if (options.crossDomain && jQuery.support.cors) {
+          options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+        }
+      });
+
+      // ===================== YOUR CODE HERE ==================
+
+      $("#itunes").on("submit", function(event) {
+        event.preventDefault()
+        var term = $("#term").val()
+        
+        $.ajax({
+        url: 'https://itunes.apple.com/search?term='+ term +'&entity=musicTrack',
+        method: "GET"
+        }).then(function (response) {
+            console.log(JSON.parse(response))
+            var res = JSON.parse(response).results
+            for (var i = 0; i < res.length; i++) {
+              $(".library").prepend('<div class="song"><img class="thumb" src="' + res[i].artworkUrl100 + '"><h2 class="song-name">' + res[i].trackName + '</h2><h4 class="song-artist">' + res[i].artistName + '</h4><audio class="song-audio" src="' + res[i].previewUrl + '"controls></audio></div>')
+            }
+
+            $("#term").val("")
+          });
+        });
+
+      // ======================================================
+    });
+
+  </script>
+</body>
+
+</html>

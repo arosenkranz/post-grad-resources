@@ -1,0 +1,40 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  /* makes it so that padding and width don't add to total size of element. i.e. height and width will now extend to define other parts of the box model */
+  box-sizing: border-box; }
+
+* {
+  font-family: 'Bitter', serif; }
+
+.nav {
+  padding: 2rem;
+  background-color: #018B78;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .nav__logo {
+    width: 4rem;
+    height: 4rem; }
+    .nav__logo-container {
+      margin-left: 2rem;
+      display: flex;
+      flex: 0 0 1; }
+  .nav__brand {
+    margin-left: .5rem; }
+  .nav__tabs {
+    flex: 0 0 1;
+    display: flex;
+    align-items: center; }
+    .nav__tabs-item {
+      font-size: 1.6rem;
+      padding: 0 1rem; }
+      .nav__tabs-item:not(:last-child) {
+        border-right: solid 2px white; }
+      .nav__tabs-item:hover {
+        cursor: pointer;
+        color: #DE8F01; }

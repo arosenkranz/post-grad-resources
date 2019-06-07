@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Find the prefix in common</title>
+</head>
+<body>
+  
+
+  <script>
+    var array = ["predestined", "predetermined", "prescient", "preschool", "precious"]
+    var array2 = ["predestined", "predetermined"]
+    var array3 = ["prescient", "preschool"]
+    function longestPrefix(arr) {
+      //We can compare every value against the first in the array. It needs to be an array do we can use the splice method
+      var compare = arr[0].split("")
+      var newstring = ""
+      
+      for (var i = 1 ; i < arr.length ; i++) {
+
+        //Compare `each` letter of `each` word
+        for (var j = 0 ; j < arr[i].length ; j++) {
+
+          if (compare[j] !== arr[i][j] && compare[j]) {
+          //Remove the rest of the chacters in the array representing our word
+          compare.splice(j)
+
+          }
+        }
+      }
+      //Convert our final product into a string
+      compare = compare.join("")
+      return compare
+
+    }
+
+    console.log(longestPrefix(array))
+    console.log(longestPrefix(array2))
+    console.log(longestPrefix(array3))
+
+  </script>
+</body>
+</html>

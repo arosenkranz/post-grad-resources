@@ -1,0 +1,45 @@
+.nav { 
+  padding: 2rem;
+  background-color: $color-primary;
+  box-shadow: 0 1rem 2rem rgba(black, .4);
+  position: relative;
+  justify-content: space-between;
+  @include flex-n-float;
+
+  &__logo {
+
+    width: 4rem;
+    height: 4rem;
+
+    &-container {
+      margin-left: 2rem;
+      display: flex;
+      flex: 0 0 1;
+    }
+  }
+
+  &__brand {
+   margin-left: .5rem;
+   align-self: flex-end;
+   font-style: italic;
+  }
+
+  &__tabs {
+    @include flex-n-float;
+
+    &-item {
+      font-size: 1.6rem;
+      padding: 0 1rem;
+
+      &:not(:last-child) {
+        border-right: solid 2px white;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $color-secondary;
+      }
+
+    }
+  }
+}

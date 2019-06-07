@@ -1,0 +1,5 @@
+@mixin flex-n-float {
+  flex: 0 0 1;
+    display: flex;
+    align-items: center;
+}

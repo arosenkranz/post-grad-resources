@@ -1,0 +1,7 @@
+gen_1_pokemon = ["pikachu", "bulbasaur", "charmander", "squritle"]
+gen_2_pokemon = ["chikorita", "cyndaquil", "totodile"]
+gen_3_pokemon = ["treecko", "torchic", "mudkip"]
+gen_4_pokemon = ["turtwig", "chimchar", "piplup"]
+gen_5_pokemon = ["snivy", "tepig", "oshawott"]
+gen_6_pokemon = ["chespin", "fennekin", "froakie"]
+gen_7_pokemon = ["rowlett", "litten", "popplio"]

@@ -1,0 +1,19 @@
+* {
+  font-family: 'Bitter', serif;
+}
+
+.heading {
+
+  &--primary {
+    color: black;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .7rem;
+  }
+
+  &--secondary {
+    color: black;
+    font-size: 2rem;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Elevator</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    var elevator1 = "^^^^^vvv^v^vv^v^^^vvvvv^^^^^^v^^v^^^v^^vvv"
+
+    var elevator2 = "^^^^^^^vv^vvv^^vv^^^^^vvvv^^^"
+
+    var elevator3 = "^^^^^^^^^^^^^^^^^^^6vvvvvvvv"
+
+    var elevator4 = "I'm a little teapot, short and stout"
+
+    var elevator5 = "^^^^^^^^^^^vvvvv^^v^^^vvv^^^vvvvv^^^"
+
+    function whichFloor(str) {
+      var floor = 0
+      var isElevator = str
+
+      isElevator = isElevator.replace(/v|\^/g,"")
+      
+      if (isElevator.length > 0) {
+        return "This elevator can't do that"
+      } 
+
+      for (var i = 0; i < str.length; i++) {
+
+        if (floor < 0) {
+          return "your elevator crashed 😯"
+        }
+
+        if (str[i] === "^") {
+          floor++
+        } else if (str[i] === "v") {
+          floor--
+        }
+      }
+
+
+      return floor
+    }
+
+    console.log(whichFloor(elevator1))
+    console.log(whichFloor(elevator2))
+    console.log(whichFloor(elevator3))
+    console.log(whichFloor(elevator4))
+    console.log(whichFloor(elevator5))
+  </script>
+</body>
+
+</html>

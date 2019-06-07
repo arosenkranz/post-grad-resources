@@ -1,0 +1,10 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* makes it so that padding and width don't add to total size of element. i.e. height and width will now extend to define other parts of the box model */
+  box-sizing: border-box;
+}

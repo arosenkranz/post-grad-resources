@@ -1,0 +1,15 @@
+{
+  "name": "solved",
+  "version": "1.0.0",
+  "description": "Mysql Practice",
+  "main": "challenge-solution.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.16.0"
+  }
+}

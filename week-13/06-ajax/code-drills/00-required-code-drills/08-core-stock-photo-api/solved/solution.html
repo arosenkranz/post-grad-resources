@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>So you think you can API? Pt.3</title>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <style>
+    .heading {
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      margin: 10px auto;
+
+    }
+
+    .holder {
+      margin: 0 10%;
+    }
+
+    .img {
+      height: 200px;
+      width: 200px;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+    <h1 class="heading">Stock Photo Generator!!!</h1>
+    <form id="form">
+      <input type="text" id="imgQuery">
+      <input type="submit">
+    </form>
+
+  <div class="holder"></div>
+
+  <script>
+    $(document).ready(function () {
+      
+      // Some APIs will give us a cross-origin (CORS) error. This small function is a fix for that error. You can also check out the chrome extenstion (https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en).
+      jQuery.ajaxPrefilter(function (options) {
+        if (options.crossDomain && jQuery.support.cors) {
+          options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+        }
+      });
+
+      // ===================== YOUR CODE HERE ==================
+      // This solution does not include an API key. You will have to fill in the API key in the query url
+
+      $("#form").on("submit", function (event) {
+        event.preventDefault()
+        var searchTerm = $("#imgQuery").val();
+        $.ajax({
+          url: 'https://api.unsplash.com//photos/random?client_id=?????????b&query=' + searchTerm + '',
+          method: "GET"
+        }).then(function (response) {
+          console.log(response)
+          $(".holder").append("<img class='img' src='" + response.urls.raw + "'/>")
+        });
+      })
+
+      //========================================================
+
+    })
+
+  </script>
+</body>
+
+</html>

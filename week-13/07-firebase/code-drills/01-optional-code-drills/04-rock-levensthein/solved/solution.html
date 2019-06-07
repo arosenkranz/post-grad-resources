@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Levensthein distance</title>
+</head>
+<body>
+
+
+  <script>
+    
+    function levensthein(str1, str2) {
+      var lev = 0;
+      var longer = compare(str1, str2)
+      
+      for (var i = 0 ; i < longer ; i++) {
+        if (str1[i] !== str2[i]) {
+         
+          lev++
+        }
+      }
+      return lev
+    }
+
+    function compare(str1, str2) {
+      if (str1.length > str2.length) {
+        return str1.length
+      } else {
+        return str2.length
+      }
+    }
+
+    levensthein("robert", "robbery")
+    levensthein("yeah", "lmno")
+    levensthein("yo", "yo")
+    levensthein("l", "length")
+    levensthein("sitting", "kitten")
+    
+  </script>
+  
+</body>
+</html>

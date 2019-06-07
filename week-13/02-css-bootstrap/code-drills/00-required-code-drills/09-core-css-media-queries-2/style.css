@@ -1,0 +1,31 @@
+@media (max-width: 1300px) {
+  .box-red {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+
+    position: fixed;
+    top: 0;
+    left: 5%;
+  }
+
+  .box-blue {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .box-red {
+
+  }
+
+  .box-blue {
+    
+  }
+}

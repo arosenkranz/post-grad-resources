@@ -1,0 +1,111 @@
+.box {
+  height: 150px;
+  width: 250px;
+  margin: 20px;
+}
+
+.inside-box {
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+
+#top1, #bottom1 {
+  background-color: red;
+}
+
+#top2, #bottom2 {
+  background-color: green;
+}
+
+#top3, #bottom3 {
+  background-color: blue;
+}
+
+button {
+  height: 100px;
+  width: 200px;
+  margin: 10px;
+}
+
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Your code goes below here! */
+
+#top1, #bottom1 {
+  float: left;
+}
+
+#top2, #bottom2 {
+  float: left;
+}
+
+#top3, #bottom3 {
+  float: left;
+}
+
+#bottom1:hover {
+  height: 100px;
+}
+
+#bottom2:active {
+  margin-right: 500px;
+}
+
+#bottom3:hover {
+  background-color: purple;
+}
+
+#bottom3:active {
+  float: right;
+}
+
+.btn-even:hover {
+  height: 150px;
+  width: 300px;
+}
+
+.btn-even:active {
+  height: 50px;
+  width: 100px;
+}
+
+.btn-odd:hover {
+  color: whitesmoke;
+  background-color: darkgrey;
+  border-style: outset;
+  border-width: 15px;
+  border-color: lightgrey;
+}
+
+.btn-odd:active {
+  color: whitesmoke;
+  background-color: black;
+  border-width: 15px;
+  border-color: grey;
+  border-style: inset;
+}
+
+/* Bonus */
+
+#top1:hover .inside-box {
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+}
+
+#top2:hover .inside-box {
+  background-color: white;
+  margin: 20px;
+}
+
+#top3:active .inside-box {
+  background-color: plum;
+  margin-top: 100px;
+  float: right;
+}

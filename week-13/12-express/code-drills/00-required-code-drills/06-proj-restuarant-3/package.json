@@ -1,0 +1,18 @@
+{
+  "name": "01",
+  "version": "1.0.0",
+  "description": "* Follow the instructions in the server.js file to set up the routes in order to serve up the HTML. \r     * Our front end guy is working feverishly on the web page, so we only have a very basic page for now.\r     * The html pages are in the public folder, so pay attention to the path you need to get there when serving them up!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mysql": "^2.16.0"
+  }
+}

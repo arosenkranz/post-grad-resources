@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Muli', sans-serif;
+}
+
+.background {
+  height: 101vh;
+  width: 100vw;
+  background-image: 
+    url("../images/background.jpg");
+  background-size: cover;
+  background-position: top;
+  background-blend-mode: screen;
+  position: fixed;
+  z-index: -2;
+}
+
+.big-banner {
+  height: 400px;
+  background-color: rgba(235,235,235, .8);
+  border-radius: 8px;
+  margin-top: -5px;
+  margin-bottom: 50px;
+  position: relative;
+  border: solid black 2px;
+  box-shadow: 0 3px 30px rgba(0,0,0,.5);
+}
+
+.add-new {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+.restaurant__img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.stars {
+  font-size: 20px;
+}
+
+.star-hov {
+  color: gold;
+}
+
+.star-click {
+  color: gold;
+}
+
+.stars-contain {
+  display: inline;
+}
+
+.stars:active {
+  transform: translateY(2px);
+}
+
+.fa-utensils {
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.restaurant-card {
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 400px;
+  margin-bottom: 30px;
+  background-color: rgba(235,235,235, .8);
+  box-shadow: 0 10px 20px rgba(0,0,0,.7);
+  position: relative;
+}
+
+
+
+.rating-contain {
+  margin: auto;
+  display: block;
+  width: 120px;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -2%);
+}
+
+
+/* ADD PAGE */
+.go-home {
+  text-decoration: none;
+  padding: 10px;
+  background-color: rgba(235,235,235, .7);
+  border-radius: 10px;
+  position: relative;
+  top: 40px;
+  left: 40px;
+}
+
+.go-home:active,
+.go-home:visited
+{
+  color: black;
+}
+
+.add {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(235,235,235, .7);
+  border-radius: 10px;
+  padding: 100px;
+}
+
+.add__form {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+}
+
+
+/* TYPOGRAPHY */
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+p {
+font-size: 13.5px;
+color: black;
+text-align: center;
+margin-top: 5px;
+}

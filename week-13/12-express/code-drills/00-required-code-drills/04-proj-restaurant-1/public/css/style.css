@@ -1,0 +1,15 @@
+.background {
+  height: 101vh;
+  width: 100vw;
+  background-image: 
+    url("../images/background.jpg");
+  background-size: cover;
+  background-position: top;
+  background-blend-mode: screen;
+  position: fixed;
+  z-index: -2;
+}
+
+.jumbotron {
+  background-color: rgba(220, 220, 220, .9)
+}

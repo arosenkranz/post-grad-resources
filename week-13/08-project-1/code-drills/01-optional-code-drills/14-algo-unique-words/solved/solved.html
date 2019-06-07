@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>What's so special about this sentence anyway???</title>
+</head>
+<body>
+  
+
+
+  <script>
+  var sent1 = "Sasha is very nice";
+  var sent2 = "Robert is very kind";
+  
+  function uncommon(s1, s2) {
+    //The object will help us keep track of how many times a given word has appeared
+    var obj = {}
+    var results = []
+    
+    //Create arrays to handle each word separately
+    var senArr1 = s1.split(" ")
+    var senArr2 = s2.split(" ")
+
+    for (var i = 0 ; i < senArr1.length ; i++) {
+      //If the key doesn't exist, initialize it to one in the obj
+      if (!obj[senArr1[i]]) {
+        obj[senArr1[i]] = 1
+      } else {
+        //else, add to the count
+        obj[senArr1[i]] ++
+      }
+      
+    }
+
+    
+  //Keep our tally going in the second array
+    for (var i = 0 ; i < senArr2.length ; i++) {
+
+      if (!obj[senArr2[i]]) {
+
+        obj[senArr2[i]] = 1
+      } else {
+        obj[senArr2[i]]++
+      }
+    }
+
+    //Returns an array of all the keys in the object passed as an argument, rather than the values they point to
+    var objKeys = Object.keys(obj)
+
+//Send all the keys whose value is one to the final array that we'll return
+    for (var i = 0 ; i < objKeys.length ; i++) {
+
+      if (obj[objKeys[i]] < 2) {
+        results.push(objKeys[i])
+      }
+    }
+   
+    return results
+    
+  }
+
+  console.log(uncommon(sent1, sent2))
+  
+  </script>
+</body>
+</html>

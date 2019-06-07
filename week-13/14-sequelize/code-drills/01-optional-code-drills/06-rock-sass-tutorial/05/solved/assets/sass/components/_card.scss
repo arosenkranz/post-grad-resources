@@ -1,0 +1,9 @@
+.card {
+  border: 2px solid black;
+  border-radius: $border-radius;
+  margin-bottom: 30px;
+  background-color: rgba(235,235,235, .8);
+  box-shadow: $shadow-default;
+  padding: 4rem;
+  width: 30rem;
+}

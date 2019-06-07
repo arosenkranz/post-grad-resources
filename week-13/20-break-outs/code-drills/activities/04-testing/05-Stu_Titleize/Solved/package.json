@@ -1,0 +1,15 @@
+{
+  "name": "solutions",
+  "version": "1.0.0",
+  "description": "Solutions for titleize exercise.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Peleke Sengstacke",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.5.0"
+  }
+}

@@ -1,0 +1,48 @@
+h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+h3 {
+  font-style: italic;
+  line-height: 30px;
+}
+
+#p1 {
+  font-family: 'Poor Story', cursive;
+}
+
+#p2 {
+  font-family: 'Lobster', cursive;
+}
+
+#p3 {
+  font-family: 'Amatic SC', cursive;
+}
+
+#p4 {
+  font-family: 'Kirang Haerang', cursive;
+}
+
+/* Bonus */
+/* The hover is a pseudo class we can use to indicate when the element is hovered over */
+
+#p1:hover {
+  font-family: 'Amatic SC', cursive;
+  font-size: 24px;
+}
+
+#p2:hover {
+  font-family: 'Kirang Haerang', cursive;
+  font-size: 24px;
+}
+
+#p3:hover {
+  font-family: 'Poor Story', cursive;
+  font-size: 24px;
+}
+
+#p4:hover {
+  font-family: 'Lobster', cursive;
+  font-size: 24px;
+}

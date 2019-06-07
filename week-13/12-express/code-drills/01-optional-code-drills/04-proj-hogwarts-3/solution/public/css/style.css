@@ -1,0 +1,271 @@
+html {
+  font-size: 62.5%;
+  background-color: #000;
+}
+
+@media (max-width: 1800px) {
+  font-size: 75%;
+}
+
+@media (max-width: 1200px) {
+  font-size: 56.25%;
+}
+
+@media (max-width: 900px) {
+  font-size: 50%;
+}
+
+@media (max-width: 600px) {
+  font-size: 40%;
+}
+
+body {
+  margin: 0;
+}
+
+.add-student {
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+}
+
+
+
+.hogwarts-letter {
+  width: 10rem;
+}
+
+.hogwarts-letter:hover {
+  transform: scale(1.2);
+}
+
+.letter-label {
+  display: block;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.parallax {
+  background-image: url("http://cdn.playbuzz.com/cdn/7aa950b4-eaa0-417d-93af-3bd332dc8086/5e549d0d-aad1-4ec1-96c9-31e36f08af8c.jpg");
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+  background-blend-mode: screen;
+  position: fixed;
+  z-index: -2;
+}
+
+.container {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+.header {
+  background-color: rgba(0,0,0,1);
+  border-radius: 1rem;
+  color: white;
+  padding: 2rem 0;
+  position: fixed;
+  z-index: 3;
+  width: 80%;
+}
+
+.header-ghost {
+  height: 24rem;
+}
+
+.teacher-contain {
+  display: block;
+  width: 80%;
+  margin: auto;
+  
+}
+
+.teachers {
+  display: inline-block;
+  margin: auto;
+  width: 12%;
+}
+
+
+.teachers:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.teachers-img {
+height: 10rem;
+width: 100%;
+}
+
+.teachers-img:hover {
+  transform: scale(1.3);
+  transition: .2s;
+
+}
+
+.teachers-label {
+  display: block;
+  clear: both;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.instructions {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+  margin: 2rem 0;
+  font-size: 3rem;
+  text-shadow: -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+
+/* STUDENTS */
+
+.school-students {
+  margin: 2rem 0;
+  background-color: rgba(0,0,0,.7);
+  border-radius: 1rem;
+  position: relative;
+}
+
+.student-pic {
+  height: 20rem;
+  max-width: 20rem;
+  width: auto;
+  display: inline;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+.student-pic:hover {
+  transform: scale(1.2);
+}
+
+.badges {
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  bottom: 7rem;
+}
+
+.teachers-badge {
+  width: 6rem;
+}
+
+.badges:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.house-crest {
+  position: absolute;
+  width: 7rem;
+  top:1rem;
+  left: 1rem;
+}
+
+.student-name {
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* UTILS */
+ 
+.cursor-no {
+  cursor: not-allowed;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.blur {
+  background-color: rgba(255,255,255,.7)
+}
+
+
+/* ADD */
+
+.parallax-add {
+  background-image: url("https://vignette.wikia.nocookie.net/harrypotter/images/9/9c/Pottermore_background_the_sorting_ceremony.jpg/revision/latest?cb=20160816192355");
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+  background-blend-mode: screen;
+  position: fixed;
+  z-index: -2;
+}
+
+.hogwarts-img {
+  width: 10rem;
+}
+
+.hogwarts-img:hover {
+  transform: scale(1.2);
+}
+
+.hogwarts-contain {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.sorting-heading {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3.5rem;
+  text-shadow: -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+.form-contain {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 2rem;
+  width: 30%;
+  border-radius: 1rem;
+  background-color: rgba(0,0,0, .7);
+/* Brown: 110,71,32 */
+}
+
+input {
+  display: block;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 5rem auto;
+  width: 90%;
+}
+
+select {
+  display: block;
+  margin: auto;
+  border-radius: 1rem;
+  height: 4rem;
+  width: 92%;
+}
+

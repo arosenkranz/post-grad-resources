@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mastering the Switch/Case</title>
+</head>
+
+<body>
+  <h1>Total clicks:
+    <span id="num"></span>
+  </h1>
+  <button class="increment" id="inc" style="height: 200px; width: 200px; background-color:orangered; color: white; border-radius: 100%">Click Me</button>
+
+  <h2 id="message"></h2>
+
+  <script>
+    var increment = 0;
+    document.getElementById("num").innerHTML = increment;
+
+    document.getElementById("inc").onclick = function () {
+      increment++;
+      document.getElementById("num").innerHTML = increment;
+      checkNum()
+    };
+
+    //TO DO:   Convert these conditional statments into a switch/case
+    function checkNum() {
+
+      switch (increment) {
+        case 1:
+          document.getElementById("message").innerHTML = "Hi."
+          break;
+
+        case 2:
+          document.getElementById("message").innerHTML = "My"
+          break;
+
+        case 3:
+        document.getElementById("message").innerHTML = "Name"
+          break;
+
+        case 4:
+          document.getElementById("message").innerHTML = "Is"
+          break;
+
+        case 5:
+          document.getElementById("message").innerHTML = "Farley."
+          break;
+
+        case 6:
+          document.getElementById("message").innerHTML = "I"
+          break;
+
+        case 7:
+          document.getElementById("message").innerHTML = "Am"
+          break;
+
+        case 8:
+          document.getElementById("message").innerHTML = "A"
+          break;
+
+        case 9:
+          document.getElementById("message").innerHTML = "Ferocious"
+          break;
+
+        case 10:
+          document.getElementById("message").innerHTML = "Feline"
+          break;
+
+        case 11:
+          document.getElementById("message").innerHTML = "Hailing"
+          break;
+
+        case 12:
+          document.getElementById("message").innerHTML = "From"
+          break;
+
+        case 13:
+          document.getElementById("message").innerHTML = "Mysterious"
+          break;
+
+        case 14:
+          document.getElementById("message").innerHTML = "Lands."
+          break;
+
+        case 15:
+          document.getElementById("message").innerHTML = "You"
+          break;
+
+        case 16:
+          document.getElementById("message").innerHTML = "Should"
+          break;
+
+        case 17:
+          document.getElementById("message").innerHTML = "Not"
+          break;
+
+        case 18:
+          document.getElementById("message").innerHTML = "Mess"
+          break;
+
+        case 19:
+          document.getElementById("message").innerHTML = "With"
+          break;
+
+        case 20:
+          document.getElementById("message").innerHTML = "Me"
+          break;
+
+        default: 
+        document.getElementById("message").innerHTML = "Farley has nothing left to say"
+        break;
+      }
+    }
+  </script>
+</body>
+
+</html>

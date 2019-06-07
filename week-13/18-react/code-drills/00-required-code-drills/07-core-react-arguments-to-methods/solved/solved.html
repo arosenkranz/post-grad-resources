@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+
+  <script type="text/babel">
+
+  const foods = [
+    {
+      food: "Pineapple",
+      price: "$1.20",
+      key: 1
+    },
+    {
+      food: "Hummus",
+      price: "$4.50",
+      key: 2
+    }, {
+      food: "Ice Cream",
+      price: "$3.75",
+      key: 3
+    }, {
+      food: "Milk",
+      price: "$1.35",
+      key: 4
+    }, {
+      food: "Pinto Beans",
+      price: "$0.80",
+      key: 5
+    }, {
+      food: "Fruity Pebbles",
+      price: "$3.50",
+      key: 6
+    }, {
+      food: "Bannanas",
+      price: "$0.18",
+      key: 7
+    }, {
+      food: "Ginger Ale",
+      price: "$0.99",
+      key: 8
+    }, {
+      food: "Eggs",
+      price: "$5.40",
+      key: 9
+    }, {
+      food: "Cream Cheese",
+      price: "$1.25",
+      key: 10
+    }
+  ]
+
+const coupon = {
+  backgroundColor: "rgb(25,210,150)"
+}
+
+  const Coupon = props => (
+    <div style={coupon} onClick={props.onClick}>
+      Food: {props.food}
+      <br/>
+      Price: {props.price}
+    </div>  
+  )
+
+  class Page extends React.Component {
+    state = {
+      food: []
+    }
+
+
+  showPurchases(food) {
+      this.setState({
+        food: [...this.state.food, food]
+      })
+    }
+
+
+    render() {
+      return (
+        <div>
+          <h1>You Bought:</h1><p> {this.state.food.length < 1 ? "Nothing!" : this.state.food.map(food => food)}</p>
+        {foods.map(food => (
+          <div>
+            <Coupon  onClick={() => this.showPurchases(food.food)} food={food.food} price={food.price} key={food.key}/>
+            <br/>
+          </div>
+        ))}
+
+        </div>  
+      )
+    }
+  }
+
+  const App = props => (
+    <div>
+      <Page/>
+    </div>  
+  )
+
+
+
+  ReactDOM.render(<App/>, document.getElementById("root"))
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Floats</title>
+</head>
+<style>
+
+    #red-textbox {
+        padding: 20px;
+        width: 300px;
+        margin: 20px;
+        background-color: red;
+        /* Float this element to the left */
+        float: left;
+    }
+
+    #yellow-textbox {
+        padding: 20px;
+        width: 300px;
+        margin: 20px;
+        background-color: yellow;
+        /* Float this element to the right */
+        float: right;
+    }
+
+    .blue-textbox {
+        padding: 20px;
+        width: 300px;
+        margin: 20px;
+        background-color: blue;
+        /* Clear the float for this element so it appears below the red and yellow boxes */
+        clear: both;
+    }
+
+</style>
+
+<body>
+
+    <!-- Add classes and IDs to the divs -->
+    <div id="red-textbox">
+        <p>I'm a red text box</p>
+    </div>
+
+    <div id="yellow-textbox">
+        <p>I'm a yellow text box</p>
+    </div>
+
+    <div class="blue-textbox">
+        <p>I'm a blue text box</p>
+    </div>
+
+    <div class="blue-textbox">
+        <p>I'm a blue text box</p>
+    </div>
+
+</body>
+
+</html>

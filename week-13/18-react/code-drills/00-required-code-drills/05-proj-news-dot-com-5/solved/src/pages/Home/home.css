@@ -1,0 +1,14 @@
+.home__heading {
+  text-align: center;
+}
+
+.home__buttons {
+  width:19%;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.home__cards {
+  position: relative;
+  margin-top: 10rem;
+}

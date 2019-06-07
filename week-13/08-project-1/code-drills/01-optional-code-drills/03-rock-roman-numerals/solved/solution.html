@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Roman Numerals</title>
+</head>
+<body>
+  
+
+  <script>
+    var roman = "MMMDCCLXXXII"
+    var roman2 = "IX"
+    var roman3 = "CMXLIV"
+
+    function convertRoman(str) {
+      var numString = 0;
+      var special = []
+      var final = 0;
+      // Iterate through the roman numeral string and create an array with all the 
+      // numerical values of each numeral
+      for (var i = 0 ; i < str.length ; i++) {
+        switch (str[i]) {
+          case "I":
+            numString+=1
+            special.push(1)
+            break;
+          case "V": 
+            numString+=5
+            special.push(5)
+            break;
+          case "X":
+            numString+=10;
+            special.push(10)
+            break;
+          case "L":
+            numString+=50;
+            special.push(50)
+            break;
+          case "C":
+            numString+=100
+            special.push(100)
+            break;
+          case "D":
+            numString+=500
+            special.push(500)
+            break;
+          case "M":
+            numString+=1000
+            special.push(1000)
+            break;
+          default:
+            return "Wait, you're not a Roman"         
+
+        }
+      }
+
+
+      // Once we've made an array with the numerical value of each Roman Numeral, iterate
+      // through the array and if at any point the current element is less than the next
+      // element, we know that it's a situation like 4 or 9 where we need to subtract the
+      // current value from the next value. So we subtract the values and delete the entry
+      // we just finished with since we're reducing two entries into one entry.
+      for (var i = 0 ; i < special.length + 1 ; i++ ) {
+        if (special[i] < special[i + 1]) {
+          special[i + 1] = (special[i + 1] - special[i])
+          special.splice(i, 1)
+        }
+      }
+
+     
+     // Now that we have an updated array of values that handles the
+     // special cases, add the values together to get the final value
+     // of the roman numeral
+     for (var i = 0 ; i < special.length ; i++) {
+       final += special[i]
+     }
+
+      return final
+    }
+
+    console.log(convertRoman(roman3))
+
+  </script>
+</body>
+</html>
